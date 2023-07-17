@@ -39,3 +39,4 @@ formulario.addEventListener("submit", (evento) => {
     window.location.href = "/screens/edicion_concluida.html";
   });
 });
+/*esta linea es de prueba*/
