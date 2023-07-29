@@ -40,3 +40,16 @@ const crearNuevaLinea = (nombre, email, id) => {
 
   return linea;
 };
+
+
+const table = document.querySelector("[data-table]");
+
+clientServices
+  .listaClientes()
+  .then((data) => {
+    data.forEach(({ nombre, email, id }) => {
+      const nuevaLinea = crearNuevaLinea(nombre, email, id);
+      table.appendChild(nuevaLinea);
+    });
+  })
+  .catch((error) => alert("Ocurrió un error"));
