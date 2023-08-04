@@ -17,6 +17,11 @@ const eliminarCliente = (id) => {
   });
 };
 
+const detalleCliente = (id) => {
+  return fetch(`http://localhost:3000/perfil/${id}`).then((respuesta) =>
+    respuesta.json()
+  );
+};
 
 const actualizarCliente = (nombre, email, id) => {
   return fetch(`http://localhost:3000/perfil/${id}`, {
