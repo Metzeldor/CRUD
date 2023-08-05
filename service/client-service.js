@@ -34,11 +34,3 @@ const actualizarCliente = (nombre, email, id) => {
     .then((respuesta) => respuesta)
     .catch((err) => console.log(err));
 };
-
-export const clientServices = {
-  listaClientes,
-  crearCliente,
-  eliminarCliente,
-  detalleCliente,
-  actualizarCliente,
-};
