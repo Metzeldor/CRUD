@@ -10,7 +10,8 @@ const obtenerInformacion = async () => {
     window.location.href = "/screens/error.html";
   }
 
- 
+  const nombre = document.querySelector("[data-nombre]");
+  const email = document.querySelector("[data-email]");
 
   try {
     const perfil = await clientServices.detalleCliente(id);
