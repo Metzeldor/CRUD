@@ -10,8 +10,7 @@ const obtenerInformacion = async () => {
     window.location.href = "/screens/error.html";
   }
 
-  const nombre = document.querySelector("[data-nombre]");
-  const email = document.querySelector("[data-email]");
+ 
 
   try {
     const perfil = await clientServices.detalleCliente(id);
@@ -25,9 +24,9 @@ const obtenerInformacion = async () => {
     window.location.href = "/screens/error.html";
   }
 };
-
 obtenerInformacion();
-
+const nombre = document.querySelector("[data-nombre]");
+const email = document.querySelector("[data-email]");
 formulario.addEventListener("submit", (evento) => {
   evento.preventDefault();
   const url = new URL(window.location);
